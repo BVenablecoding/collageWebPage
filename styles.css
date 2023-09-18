@@ -1,0 +1,135 @@
+@keyframes spaceAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100vw 100vh;
+    }
+}
+
+* {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    animation: spaceAnimation 50s infinite linear;
+    background-color: #000;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* This is a semi-transparent repeating star pattern. */
+    color: #FFF;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin: 20px;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5em;
+}
+
+nav ul, div > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav ul li, div > ul li {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li:hover, div > ul li:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+
+nav ul li a, div > ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.8);
+    padding: 10px 0;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f06c9b;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+.course-content {
+    display: none;
+}
+
+#interstellarContent:target {
+    display: block;
+}
+.course-content {
+    display: none;
+}
+
+#interstellarContent:target,
+#galacticContent:target,
+#cosmicContent:target,
+#nebulaContent:target,
+#starshipContent:target,
+#orbitalContent:target,
+#satelliteContent:target,
+#moonbaseContent:target,
+#spaceStationContent:target,
+#astronomicalContent:target,
+#cometContent:target {
+    display: block;
+}
+.course-content {
+    display: none;
+}
+
+a:focus + .course-content {
+    display: block;
+}
